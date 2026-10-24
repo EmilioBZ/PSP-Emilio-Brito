@@ -21,15 +21,20 @@ int main() {
         cout << "La figura es un rectangulo\n";
     } 
     else if (a > 0 && b > 0 && c > 0) {
-        if (a == b && b == c) {
-            cout << "La figura es un triangulo equilatero\n";
-        } 
-        else if ((a == b && a != c) || (a == c && a != b) || (b == c && b != a)) {
-            cout << "La figura es un triangulo isosceles\n";
-        } 
+    	if ((a+b > c) && (a+c > b) && (b+c> a)){
+        	if (a == b && b == c) {
+            	cout << "La figura es un triangulo equilatero\n";
+        	} 
+        	else if ((a == b && a != c) || (a == c && a != b) || (b == c && b != a)) {
+            	cout << "La figura es un triangulo isosceles\n";
+        	} 
+        	else {
+            	cout << "La figura es un triangulo escaleno\n";
+        	}
+   		} 
         else {
-            cout << "La figura es un triangulo escaleno\n";
-        }
+   			cout << "Los valores no indican figura.\n";
+			}
     } 
     else {
         cout << "Los valores no indican figura.\n";
